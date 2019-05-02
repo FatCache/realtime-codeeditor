@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <strong>
+    {{title}}
+  </strong>
+</div>
+<nav>
+    <strong>Realtime Text Editor</strong> |
+    <a href="#" (click)="toggleTextEditor()">View Text Editor</a> |
+    <a href="#" (click)="toggleCodeEditor()">View Code Editor</a> |
+    <a href="#" >About Us</a>
+  </nav>
+<!-- <app-document-header></app-document-header> -->
+<div class="container">
+<app-document-list *ngIf="textEditorFlag"></app-document-list>
+<app-document *ngIf="textEditorFlag"></app-document>
+<app-codeeditor *ngIf="codeEditorFlag"></app-codeeditor>
+</div>

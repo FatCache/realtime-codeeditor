@@ -1,0 +1,125 @@
+
+  
+<div class="container">
+
+  <p id="memb" class="lead">Already a member? Please <a routerLink="/login">log in</a> instead.</p>
+
+<div class="container p-3">
+    <div class="offset-3 col-6">
+      <div class="card">
+        <div class="card-header">
+          Sign Up Form
+        </div>
+        <div class="card card-body">
+          <form [formGroup]="frmSignup" (submit)="register()">
+      
+                <div class="form-group">
+                    <label for="name">Full name</label>
+                  <input type="text"class="form-control" id="namee" formControlName="name" placeholder="Enter your name" [(ngModel)]="credentials.name">
+                  </div>
+            
+             <div class="form-group">
+              <label for="email" [ngClass]="frmSignup.controls['email'].invalid ? 'text-danger' : ''">Email Address</label>
+              <input id="email" formControlName="email" type="email" class="form-control"[(ngModel)]="credentials.email" [ngClass]="frmSignup.controls['email'].invalid ? 'is-invalid' : ''">
+              <label class="text-danger" *ngIf="frmSignup.controls['email'].hasError('required')">
+                Email is Required!
+              </label>
+              <label class="text-danger" *ngIf="frmSignup.controls['email'].hasError('email')">
+                Enter a valid email address!
+              </label>
+            </div>
+            
+            
+            <div class="form-group">
+              <label for="password" [ngClass]="frmSignup.controls['password'].invalid ? 'text-danger' : ''">Password:</label>
+              <input id="password" formControlName="password" type="password" class="form-control" [(ngModel)]="credentials.password" [ngClass]="frmSignup.controls['password'].invalid ? 'is-invalid' : ''">
+              <!-- <label class="text-danger col" *ngIf="frmSignup.controls['password'].hasError('required')">
+                Password is Required!
+              </label> -->
+              <label class="col" [ngClass]="frmSignup.controls['password'].hasError('required') || frmSignup.controls['password'].hasError('minlength')  ? 'text-danger' : 'text-success'">
+                
+                Must be at least 8 characters!
+              </label>
+              <label class="col" [ngClass]="frmSignup.controls['password'].hasError('required') || frmSignup.controls['password'].hasError('hasNumber')  ? 'text-danger' : 'text-success'">
+                
+                Must contain at least 1 number!
+              </label>
+              <label class="col" [ngClass]="frmSignup.controls['password'].hasError('required') || frmSignup.controls['password'].hasError('hasCapitalCase')  ? 'text-danger' : 'text-success'">
+            
+                Must contain at least 1 in Capital Case!
+              </label>
+              <label class="col" [ngClass]="frmSignup.controls['password'].hasError('required') || frmSignup.controls['password'].hasError('hasSmallCase')  ? 'text-danger' : 'text-success'">
+               
+                Must contain at least 1 Letter in Small Case!
+              </label>
+              <label class="col" [ngClass]="frmSignup.controls['password'].hasError('required') || frmSignup.controls['password'].hasError('hasSpecialCharacters') ? 'text-danger' : 'text-success'">
+               
+                Must contain at least 1 Special Character!
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword" [ngClass]="frmSignup.controls['confirmPassword'].invalid ? 'text-danger' : ''">Confirm
+                Password:</label>
+              <input id="confirmPassword" formControlName="confirmPassword" type="password" class="form-control"
+                [ngClass]="frmSignup.controls['confirmPassword'].invalid ? 'is-invalid' : ''">
+              <label class="text-danger" *ngIf="frmSignup.controls['confirmPassword'].hasError('required')">
+                Password is Required!
+              </label>
+              <label class="text-danger" *ngIf="frmSignup.controls['confirmPassword'].hasError('NoPassswordMatch')">
+                Password do not match
+              </label>
+            </div>
+            <div class="form-group">
+              <input type="submit"  [disabled]="frmSignup.invalid" id="btnsubmit" value="Register" class="btn btn-primary btn-block font-weight-bold">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+  
+<div class="container">
+
+<div class="container p-3">
+    <div class="offset-3 col-6">
+      <div class="card">
+        <div class="card-header  font-weight-bold">
+          Update Form
+        </div>
+        <div class="card card-body">
+          <form [formGroup]="frmSignup">
+      
+                <div class="form-group">
+                    <label for="name">Full name</label>
+                  <input type="text"class="form-control" id="nameupdate" formControlName="name" placeholder="Enter your name" [(ngModel)]="credentials.name">
+                  </div>
+            
+             <div class="form-group">
+              <label for="emailupdate" [ngClass]="frmSignup.controls['email'].invalid ? 'text-danger' : ''">Email Address</label>
+              <input id="emailupdate" formControlName="email" type="email" class="form-control"[(ngModel)]="credentials.email" [ngClass]="frmSignup.controls['email'].invalid ? 'is-invalid' : ''">
+              <label class="text-danger" *ngIf="frmSignup.controls['email'].hasError('required')">
+                Email is Required!
+              </label>
+              <label class="text-danger" *ngIf="frmSignup.controls['email'].hasError('email')">
+                Enter a valid email address!
+              </label>
+            </div>
+            
+            
+            <div class="form-group">
+              <input type="submit" id="btnupdate" value="update" class="btn btn-primary btn-block font-weight-bold">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

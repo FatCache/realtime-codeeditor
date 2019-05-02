@@ -1,0 +1,64 @@
+#head-bar{
+    background-color: bisque;
+    height: 20%;
+    padding: 20px;
+    width: 80.4%;
+    margin: auto;
+}
+#head-bar p{
+    font-weight: bold;
+    color: darkslategray;
+    text-align: center;
+    font-size: 2em;
+}
+
+nav{
+    margin: auto;
+    width: 81.6%;
+    background-color: darkolivegreen;
+    padding: 20px;
+    padding-right: 0px;
+}
+nav>strong{
+    text-align: left;
+    color: aliceblue;
+    margin-right: 50%;
+}
+nav>a{
+    text-align: end;
+    margin-left: 10px;
+    text-decoration: none;
+    color: aliceblue;
+}
+nav>a:visited{
+    color: aliceblue;
+}
+nav>a:hover{
+    color: burlywood;
+}
+.container {
+    margin: auto;
+    position: relative;
+    border: solid 4px papayawhip;
+    width: 1255px;
+    height: 410px;
+    box-shadow: 0px,15px,15px,0px;
+}
+
+#together{
+    background-color: burlywood;
+    position: relative;
+    font-size: 15px;
+    font-family: 'sans-serif', Tahoma, Geneva, Verdana, sans-serif;
+    top: 20px;
+    right: -1085px;
+    height: 10%;
+    padding: 20px;
+    width: 20%;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+

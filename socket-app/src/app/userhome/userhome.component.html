@@ -1,0 +1,27 @@
+<div style="text-align:center">
+  <strong>
+    {{title}}
+  </strong>
+</div>
+
+<div id="head-bar">
+  <p>
+    <img src="../assets/logo.png" alt="Editor_logo" height="50" width="50" align="top">
+    {{title}}
+  </p>
+</div>
+
+<nav>
+    <strong>Realtime text and code editing</strong><!--
+--><a  (click)="toggleTextEditor()">View Text Editor</a> &nbsp;
+    <a  (click)="toggleCodeEditor()">View Code Editor</a> &nbsp;
+    <a  >About Us</a>
+  </nav>
+<!-- <app-document-header></app-document-header> -->
+<div class="container">
+<app-document-list *ngIf="textEditorFlag"></app-document-list>
+<app-document *ngIf="textEditorFlag"></app-document>
+<app-codeeditor *ngIf="codeEditorFlag"></app-codeeditor>
+</div>
+<button id ="together" onclick="TogetherJS(this); return false;">Start TogetherJS</button>
+<script src="https://togetherjs.com/togetherjs-min.js"></script>

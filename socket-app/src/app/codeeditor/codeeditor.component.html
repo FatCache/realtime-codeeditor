@@ -1,0 +1,68 @@
+<!--<ace-editor
+  [(text)]="text"
+  (textChanged)="onChange($event)"
+  #editor style="height:30%;"></ace-editor>
+  
+  <button (click) = "clearHistory()">Clear History</button>
+-->
+
+  <div>
+    <small>Select Theme</small>
+    <select (change)="themechanger($event)" id="theselect">
+      <optgroup label="Please Select..">
+      <option value="twilight">Twilight</option>
+      <option value="tomorrow_night_blue">Night Blue</option>
+      <option value="eclipse">Eclipse</option>
+      <option value="solarized_dark">Solarized Dark</option>
+      <option value="kuroir">Kuroir</option>
+      </optgroup>
+    </select>
+  
+    <small>Select Language</small>
+    <select (change)="modechanger($event)" id="modeselect">
+    <optgroup label="Please Select..">
+      <option value="javascript">Javascript</option>
+      <option value="C++">C++</option>
+      <option value="Python3">Python 3</option>
+      <option value="Java">Java</option>
+      </optgroup>
+    </select>
+  </div>
+  
+   <ace-editor
+      [(text)]="text"
+      (textChanged)="onChange($event)"
+      #editor style="height:100%;"></ace-editor>
+    <br>
+<br>
+<br>
+    <br>
+
+
+
+
+  
+<div class="experimental">
+    <strong><em>Experimental</em> </strong>
+  <form [formGroup]="sliderForm">
+    <p>Past value: {{ sliderForm.value.sliderControl[0] }}</p>
+    <p>Latest value: {{ sliderForm.value.sliderControl[1] }}</p>
+    <p><button (click)="resetForm()">Reset</button></p>
+    <em>Time Machine</em>
+    <div class="custom-slider">
+    <ng5-slider [options]="options" formControlName="sliderControl"
+          (userChangeEnd)="onUserChangeEnd($event)">
+        </ng5-slider>
+      </div>
+  </form>
+  <br>
+  <br>
+  <em>History Length: {{_deltalengthDisplay}}</em>
+</div>
+<!--   
+  <textarea type="text" class="form-control" style="min-width: 100%; min-height: 300px;">
+    {{logText}}
+    </textarea> 
+    (userChangeStart)="onUserChangeStart($event)"
+          (userChange)="onUserChange($event)"
+  -->

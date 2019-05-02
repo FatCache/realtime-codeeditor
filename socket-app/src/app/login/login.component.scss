@@ -1,0 +1,58 @@
+.card-header{
+    position: relative;
+    background-color: bisque;
+    height: 20%;
+    padding: 20px;
+    width: 100%;
+    left: -20px;
+
+}
+
+.card{
+    background-color: slategrey;
+    height: 20%;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+#address{
+    position: relative;
+    height: 20%;
+    padding: 20px;
+    width: 100%;
+    left: -150px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.mail{
+    position: relative;
+    height: 2%;
+    width: 20%;
+    left: 10px;
+}
+
+#pass{
+    position: relative;
+    height: 20%;
+    padding: 20px;
+    width: 100%;
+    left: -150px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.passw{
+    position: relative;
+    height: 2%;
+    width: 20%;
+    left: 50px;
+}
+
+#butt{
+    position: relative;
+    height: 30%;
+    width: 40%;
+    left: 5px;
+}
